@@ -6,7 +6,15 @@ import Image from "next/image";
 import Link from "next/link";
 
 interface EventsDetailUIProps {
-  event: any;
+  event: {
+    title: string;
+    desc: string;
+    date: string;
+    image: string;
+    category: string;
+    time: string;
+    location: string;
+  };
 }
 
 export default function EventsDetailUI({ event }: EventsDetailUIProps) {
@@ -27,7 +35,7 @@ export default function EventsDetailUI({ event }: EventsDetailUIProps) {
     }
   };
 
-  const todayStr = new Date().toISOString().split('T')[0];
+  const todayStr = new Date().toISOString().split("T")[0];
   let status = "Upcoming";
   let statusColor = "bg-primary text-white";
   let showRegister = true;
@@ -43,7 +51,7 @@ export default function EventsDetailUI({ event }: EventsDetailUIProps) {
   }
 
   const d = new Date(event.date);
-  const formattedDate = d.toLocaleDateString('en-US', { day: 'numeric', month: 'long', year: 'numeric' });
+  const formattedDate = d.toLocaleDateString("en-US", { day: "numeric", month: "long", year: "numeric" });
 
   return (
     <div className="bg-slate-50 min-h-screen">

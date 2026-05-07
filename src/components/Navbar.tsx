@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Phone, Menu, X, MessageCircle } from "lucide-react";
+import { Phone, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -25,11 +25,6 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  // Close mobile menu on route change
-  useEffect(() => {
-    setIsOpen(false);
-  }, [pathname]);
 
   const navLinks = [
     { name: "Home", href: "/" },
@@ -136,6 +131,7 @@ export default function Navbar() {
                     >
                       <Link
                         href={link.href}
+                        onClick={() => setIsOpen(false)}
                         className={`text-sm font-black flex items-center justify-between group px-3 py-1.5 rounded-md transition-colors ${
                           isActive(link.href) ? "bg-primary/5 text-primary" : "text-slate-700 hover:bg-slate-50"
                         }`}

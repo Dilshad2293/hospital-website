@@ -1,37 +1,36 @@
-import { Metadata } from "next";
-import Hero from "@/components/Hero";
-import Stats from "@/components/Stats";
-import About from "@/components/About";
 import Departments from "@/components/Departments";
-import WhyChooseUs from "@/components/WhyChooseUs";
-import LabsServices from "@/components/LabsServices";
 import DoctorsPreview from "@/components/DoctorsPreview";
-import Testimonials from "@/components/Testimonials";
-import Insurance from "@/components/Insurance";
 import FAQ from "@/components/FAQ";
-import ContactSection from "@/components/ContactSection";
+import About from "@/components/About";
 import Footer from "@/components/Footer";
+import Hero from "@/components/Hero";
+import Insurance from "@/components/Insurance";
+import LabsServices from "@/components/LabsServices";
+import { ShieldCheck } from "lucide-react";
+import { Metadata } from "next";
+import Testimonials from "@/components/Testimonials";
+import StickyBottomBar from "@/components/StickyBottomBar";
+import Stats from "@/components/Stats";
 
 export const metadata: Metadata = {
-  title: "Gutti Malnad Hospital | Best Multi-Specialty Hospital in Shivamogga",
-  description: "Experience world-class healthcare at Gutti Malnad Hospital. 24/7 emergency care, expert doctors, and advanced diagnostics in Shivamogga.",
+  title: "Diagnostic Services | Gutti Malnad Hospital",
+  description: "Advanced MRI, CT Scan, Ultrasound, and Laboratory services in Shivamogga.",
 };
 
-export default function Home() {
+export default function ServicesPage() {
   return (
-    <>
-      <Hero />
-      <Stats />
-      <About />
-      <Departments />
-      <WhyChooseUs />
-      <LabsServices />
-      <DoctorsPreview />
-      <Testimonials />
-      <Insurance />
-      <FAQ />
-      <ContactSection />
+    <div className="bg-slate-50 min-h-screen">
+      
+      <Hero/>
+      <Stats/>
+      <About/>
+      <Departments/>
+      <DoctorsPreview/>
+      <FAQ/>
+      <Testimonials/>
+      <StickyBottomBar/>
+      
       <Footer />
-    </>
+    </div>
   );
 }

@@ -67,7 +67,7 @@ export default function Testimonials() {
                 ))}
               </div>
               
-              <p className="text-slate-600 italic mb-6 md:mb-10 leading-relaxed font-medium relative z-10">"{t.feedback}"</p>
+              <p className="text-slate-600 italic mb-6 md:mb-10 leading-relaxed font-medium relative z-10">&quot;{t.feedback}&quot;</p>
               
               <div className="flex items-center gap-4">
                 <div className="w-16 h-16 rounded-lg md:rounded-2xl overflow-hidden border-2 border-white shadow-md relative shrink-0">

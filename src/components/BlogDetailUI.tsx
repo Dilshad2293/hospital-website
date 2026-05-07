@@ -6,7 +6,15 @@ import Image from "next/image";
 import Link from "next/link";
 
 interface BlogDetailUIProps {
-  post: any;
+  post: {
+    title: string;
+    excerpt?: string;
+    image: string;
+    content: string;
+    date: string;
+    author: string;
+    category: string;
+  };
 }
 
 export default function BlogDetailUI({ post }: BlogDetailUIProps) {

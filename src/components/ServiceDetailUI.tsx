@@ -3,11 +3,20 @@
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import { Phone, MessageCircle, ChevronRight, CheckCircle2, Info, ShieldCheck, ChevronLeft, Share2, Printer } from "lucide-react";
-import Image from "next/image";
 
 interface ServiceDetailUIProps {
-  service: any;
-  allServices: any[];
+  service: {
+    slug: string;
+    title: string;
+    description: string;
+    fullDescription: string;
+    benefits: string[];
+    whenToUse: string[];
+  };
+  allServices: Array<{
+    slug: string;
+    title: string;
+  }>;
 }
 
 export default function ServiceDetailUI({ service, allServices }: ServiceDetailUIProps) {
@@ -105,7 +114,7 @@ export default function ServiceDetailUI({ service, allServices }: ServiceDetailU
             <div className="bg-emerald-50 px-6 py-8 md:p-12 rounded-[3.5rem] border border-emerald-100 border-slate-100 shadow-sm">
               <h3 className="text-2xl font-black text-emerald-900 mb-4">Preparation for {service.title}</h3>
               <p className="text-emerald-700 font-medium leading-relaxed">
-                Most diagnostic tests require some level of preparation. Our staff will provide specific instructions when you book your appointment. In general, please bring any previous reports and a valid doctor's prescription.
+                Most diagnostic tests require some level of preparation. Our staff will provide specific instructions when you book your appointment. In general, please bring any previous reports and a valid doctor&apos;s prescription.
               </p>
 
               <div className="mt-8 pt-8 border-t border-emerald-200/50 flex flex-wrap items-center justify-between gap-4">

@@ -23,7 +23,7 @@ export default function TermsConditions() {
 
         <h2 className="text-2xl font-black text-slate-900 mt-12 mb-6">3. Appointments and Cancellations</h2>
         <p className="text-slate-600 leading-relaxed">
-          While we strive to adhere to scheduled appointment times, medical emergencies may sometimes cause delays. We appreciate your patience. Please provide at least 24 hours' notice for cancellations when possible.
+          While we strive to adhere to scheduled appointment times, medical emergencies may sometimes cause delays. We appreciate your patience. Please provide at least 24 hours&apos; notice for cancellations when possible.
         </p>
 
         <h2 className="text-2xl font-black text-slate-900 mt-12 mb-6">4. Payment Terms</h2>

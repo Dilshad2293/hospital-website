@@ -3,11 +3,20 @@
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import { Phone, MessageCircle, ChevronRight, CheckCircle2, Clock, ShieldCheck, ChevronLeft, Share2, Printer } from "lucide-react";
-import Image from "next/image";
 
 interface DepartmentDetailUIProps {
-  department: any;
-  allDepartments: any[];
+  department: {
+    slug: string;
+    name: string;
+    description: string;
+    fullDescription: string;
+    benefits: string[];
+    whenToVisit: string[];
+  };
+  allDepartments: Array<{
+    slug: string;
+    name: string;
+  }>;
 }
 
 export default function DepartmentDetailUI({ department, allDepartments }: DepartmentDetailUIProps) {
