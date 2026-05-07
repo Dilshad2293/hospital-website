@@ -63,10 +63,10 @@ export default function Navbar() {
               </div>
               <div className="flex flex-col">
                 <span className="font-black text-base md:text-xl text-slate-900 leading-tight tracking-tight">
-                  Gutti Malnad
+                  DK Hospital
                 </span>
-                <span className="text-[9px] md:text-xs font-bold text-primary uppercase tracking-[0.2em] leading-none">
-                  Hospital
+                <span className="text-[9px] md:text-xs font-bold text-primary uppercase tracking-[0.2em] leading-none mt-1">
+                  Multispeciality
                 </span>
               </div>
             </Link>
